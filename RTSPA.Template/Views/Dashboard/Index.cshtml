@@ -1,0 +1,32 @@
+﻿
+<h2>{{vm.title}}</h2>
+<h3>{{vm.description}}</h3>
+
+<div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-md-2">Name</th>
+                        <th class="col-md-2">Value</th>
+                        <th class="col-md-2">Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in vm.dataCollection track by $index">
+                        <td class="col-md-2 small">{{d.Name}}</td>
+                        <td class="col-md-2 small">{{d.Value}}</td>
+                        <td class="col-md-2 small">{{d.Timestamp}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-md-4">
+            <div id="graphContainer" style="width:400px;height:250px;"></div>
+        </div>
+    </div>
+</div>
